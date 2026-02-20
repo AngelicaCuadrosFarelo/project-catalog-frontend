@@ -1,0 +1,14 @@
+.sectionTitle {
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.sectionTitle h1 {
+  color: var(--contrast-secondary);
+  font-size: 1.5rem;
+}
+
+.sectionTitle p {
+  color: gray;
+}

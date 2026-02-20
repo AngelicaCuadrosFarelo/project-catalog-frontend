@@ -1,0 +1,75 @@
+.header {
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.header_logo img {
+  height: 30px;
+  width: 30px;
+}
+
+.header_logo span {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--contrast-secondary);
+}
+
+.header_nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.header_nav a {
+  text-decoration: none;
+  color: var(--contrast-secondary);
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.header_nav a:hover {
+  background-color: var(--bg-secondary);
+  color: var(--contrast-primary);
+}
+
+.carrito {
+  text-decoration: none;
+  color: var(--contrast-secondary);
+  position: relative;
+}
+
+.carrito span {
+  width: 15px;
+  height: 15px;
+  background-color: var(--contrast-primary);
+  color: white;
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  border-radius: 50%;
+  font-size: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

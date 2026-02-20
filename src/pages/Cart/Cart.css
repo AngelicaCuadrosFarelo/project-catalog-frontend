@@ -1,0 +1,25 @@
+.cart {
+  width: 100%;
+}
+
+.cart_content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cart_item {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  gap: 15px;
+}
+
+.cart_pay {
+  flex: 2;
+  background-color: white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 255, 0.207);
+  border-radius: 20px;
+  padding: 15px;
+}

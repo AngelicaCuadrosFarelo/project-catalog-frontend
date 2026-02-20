@@ -1,0 +1,98 @@
+.landing {
+  width: 100%;
+}
+
+.landing_image {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.pexels.com/photos/10493902/pexels-photo-10493902.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* .landing_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+.landing_image span {
+  color: var(--contrast-primary);
+  margin-left: 100px;
+  font-size: small;
+}
+
+.landing_image h2 {
+  color: white;
+  margin-left: 100px;
+  font-size: 50px;
+  line-height: 1.1;
+}
+
+.landing_image p {
+  color: white;
+  margin-left: 100px;
+  line-height: 1.1;
+  font-size: larger;
+  font-weight: 200;
+}
+
+.landing_image a {
+  width: 150px;
+  height: 40px;
+  background-color: var(--contrast-primary);
+  color: white;
+  padding: 9px 24px;
+  border: none;
+  border-radius: 100px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 100px;
+  margin-top: 30px;
+  text-decoration: none;
+  display: grid;
+  place-content: center;
+}
+
+.infoContainer {
+  width: 100%;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.infoBox {
+  background-color: #f5f5f5;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: default;
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.infoBox span {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--contrast-primary);
+  background: #137fec2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
