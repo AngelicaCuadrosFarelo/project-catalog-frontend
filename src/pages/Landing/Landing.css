@@ -18,14 +18,6 @@
   background-position: center;
 }
 
-/* .landing_image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-} */
 .landing_image span {
   color: var(--contrast-primary);
   margin-left: 100px;
