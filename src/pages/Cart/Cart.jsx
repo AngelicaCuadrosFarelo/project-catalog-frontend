@@ -9,13 +9,29 @@ import {
   MingcuteSafetyCertificateFill,
 } from "../../components/Icons/Icons";
 
+const whatsapp = "573226127460";
+
 export function Cart() {
-  const { totalItems, items, cartTotal } = useCart();
+  const { totalItems, items, cartTotal, isEmpty } = useCart();
+
+  const handleShopping = () => {
+    const products = items
+      .map((item) => {
+        const { name, quantity, price } = item;
+        return `* ${name} (x${quantity}): $${quantity * price}`;
+      })
+      .join("\n");
+    const message = `*🛒 Nuevo pedido*
+    *🛍️ Productos:*\n${products}
+    *💵 Total:* $${cartTotal}`;
+    const url = `https://wa.me/${whatsapp}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+  };
 
   return (
     <section className="cart page">
       <SectionTitle
-        title="Carrito de Compras"
+        title="Tu carrito"
         description={`Tienes ${totalItems} productos en tú carrito`}
       />
       <div className="cart_content">
@@ -39,7 +55,9 @@ export function Cart() {
             Total <span>$ {cartTotal}</span>
           </p>
 
-          <button>Finalizar compra</button>
+          <button onClick={handleShopping} disabled={isEmpty}>
+            Finalizar compra
+          </button>
           <Link
             to={{
               pathname: "/",
