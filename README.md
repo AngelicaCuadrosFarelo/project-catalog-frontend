@@ -1,3 +1,78 @@
+# Catálogo Frontend – Colchonería
+
+Aplicación frontend del sistema de catálogo para una colchonería.
+Permite visualizar productos, categorías y detalles, consumiendo la API del backend.
+
+# Descripción del Proyecto
+
+Este repositorio contiene la aplicación web encargada de:
+
+Visualizar el catálogo de productos (colchones, bases, cabeceros, accesorios)
+
+- Filtrar por categorías
+
+- Ver detalle de productos
+
+- Consultar disponibilidad
+
+- Interactuar con el backend mediante API REST
+
+La aplicación está diseñada con enfoque en experiencia de usuario, diseño responsivo y arquitectura escalable.
+
+- Arquitectura
+
+Arquitectura basada en componentes:
+
+Pages → Components → Services → API
+
+# Estructura lógica:
+
+Pages: Vistas principales (Home, Productos, Detalle, Admin)
+
+Components: Componentes reutilizables (Header, Landing, Products, Footer, etc.)
+
+Services: Conexión y consumo de API
+
+Hooks / Store: Manejo de estado global.
+
+# Funcionalidades Principales
+
+✅ Listado de productos
+
+✅ Filtro por categorías
+
+✅ Vista detalle de producto
+
+✅ Diseño responsivo
+
+✅ Consumo dinámico de API
+
+🛒 Preparado para futura integración de carrito de compras
+
+🎨 Diseño
+
+UI enfocada en experiencia de usuario
+
+Adaptable a dispositivos móviles
+
+Componentes reutilizables
+
+Buenas prácticas de accesibilidad.
+
+📈 Futuras Mejoras
+
+Carrito de compras
+
+Sistema de pagos
+
+Panel administrativo completo
+
+Sistema de reseñas
+
+Wishlist
+
+SEO optimizado
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

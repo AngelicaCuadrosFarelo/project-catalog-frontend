@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./ProductCard.css";
+import { formatCOP } from "../../utils/utils";
 
 export function ProductCard({ id, name, price, image, category }) {
   return (
@@ -8,7 +9,7 @@ export function ProductCard({ id, name, price, image, category }) {
       <div className="productCard_info">
         <span>{category.name.toUpperCase()}</span>
         <h3>{name}</h3>
-        <p>${price}</p>
+        <p>{formatCOP(price)}</p>
       </div>
     </Link>
   );

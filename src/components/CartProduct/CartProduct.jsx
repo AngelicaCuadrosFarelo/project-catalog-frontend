@@ -1,6 +1,7 @@
 import "./CartProduct.css";
 import { useCart } from "react-use-cart";
 import { TablerTrash } from "../Icons/Icons";
+import { formatCOP } from "../../utils/utils";
 
 export function CartProduct({ image, title, count, price, id, stock }) {
   const { removeItem, updateItemQuantity } = useCart();
@@ -10,7 +11,7 @@ export function CartProduct({ image, title, count, price, id, stock }) {
       <img src={image} alt="imagenProduc" />
       <div className="cartProduct_content">
         <h2>{title} </h2>
-        <p>${price} </p>
+        <p>{formatCOP(price)} </p>
       </div>
       <div className="cartProduct_count">
         <div className="cartProduct_counters">

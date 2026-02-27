@@ -8,6 +8,7 @@ import {
   MdiTruckCheck,
   MingcuteSafetyCertificateFill,
 } from "../../components/Icons/Icons";
+import { formatCOP } from "../../utils/utils";
 
 const whatsapp = "573226127460";
 
@@ -18,12 +19,12 @@ export function Cart() {
     const products = items
       .map((item) => {
         const { name, quantity, price } = item;
-        return `* ${name} (x${quantity}): $${quantity * price}`;
+        return `* ${name} (x${quantity}): ${formatCOP(quantity * price)}`;
       })
       .join("\n");
-    const message = `*🛒 Nuevo pedido*
-    *🛍️ Productos:*\n${products}
-    *💵 Total:* $${cartTotal}`;
+    const message = `*Nuevo pedido*
+    *Productos:*\n${products}
+    *Total:* ${formatCOP(cartTotal)}`;
     const url = `https://wa.me/${whatsapp}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   };
@@ -52,7 +53,7 @@ export function Cart() {
           <h3>Resumen del pedido </h3>
           <hr />
           <p>
-            Total <span>$ {cartTotal}</span>
+            Total <span>{formatCOP(cartTotal)}</span>
           </p>
 
           <button onClick={handleShopping} disabled={isEmpty}>
